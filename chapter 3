@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Computer Software and Operating System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light background color */
+            color: #000; /* Black text */
+        }
+        h1, h2, h3 {
+            color: #333; /* Darker text for headings */
+            animation: fadeIn 1s ease-in;
+        }
+        p {
+            line-height: 1.6;
+            animation: slideIn 1s ease-in;
+        }
+        ul {
+            animation: slideIn 1s ease-in;
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0; /* Light gray header */
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff0000; /* Highlight main points in red */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 3: Computer Software and Operating System</h1>
+
+    <h2>Software - Introduction</h2>
+    <p>
+        As we know, standalone hardware cannot do anything. For the smooth operation of our computer system, there must be proper coordination between hardware and software. Software helps to mobilize the hardware and other resources. To mobilize hardware, we have to write several sets of instructions that instruct the computer what to do and what not to do. These sets of instructions are collectively known as programs, and the term software is the collection of related programs and associated documents. In order to produce useful output, hardware and software must work together; nothing useful can be done with hardware alone, and software cannot be utilized without hardware. The different types of software are:
+    </p>
+
+    <h3>1) System Software</h3>
+    <p>
+        System software is a set of one or more programs designed to control the operation of our computer system. This type of software doesn't fulfill the specific requirement of the user; they are general programs written to assist humans in the use of the computer system. Generally, system software supports the running of other software, communicates with peripheral devices, supports the development of other types of software, and monitors the use of various hardware resources. Thus, system software makes the operation of the computer system more effective and efficient. The system software is categorized into two categories:
+    </p>
+    <div style="text-align: center;">
+        <img src="img6.gif" alt="Description of image 1" style="display: inline-block; width: 30%; margin-right: 10px;">
+        <img src="img7.jpg" alt="Description of image 2" style="display: inline-block; width: 30%; margin-right: 10px;">
+        <img src="img8.jpeg" alt="Description of image 3" style="display: inline-block; width: 30%;">
+    </div>
+    <h4>1.1) System Management</h4>
+    <p>
+        It is responsible for the proper management and functioning of the computer system. All types of management between computer hardware and software are performed by system management software. There are three types of system management software:
+    </p>
+
+    <h5>1.1.1) Operating System</h5>
+    <p>
+        An operating system is a collection of programs that controls the overall operation of the computer system. It is the first program that is loaded into memory when the computer is turned on. It provides a platform for other application programs to run and execute, and it provides users with an interface to communicate with the computer. Examples include Linux, Windows, Mac, etc.
+    </p>
+
+    <h5>1.1.2) Utility Software</h5>
+    <p>
+        Utility software is supporting software used to perform specific tasks related to the maintenance of the computer system. Some utility software is included in the operating system, while others are available as separate utilities in the market. They are also called service programs. Examples include Norton Utility, PC Tools, WinZip, etc.
+    </p>
+
+    <h5>1.1.3) Device Driver</h5>
+    <p>
+        A device driver is software that is responsible for the smooth functioning of hardware devices connected to the computer. When a new device is added, a new software called device driver needs to be installed. The device driver coordinates with the operating system to ensure the newly installed hardware functions properly and smoothly.
+    </p>
+
+    <h4>1.2) System Development</h4>
+    <p>
+        This refers to a set of programs used to develop computer programs. This type of software is not used by the average user; rather, it is used by programmers for the development of new programs. There are two types of system development software:
+    </p>
+
+    <h5>1.2.1) Programming Language</h5>
+    <p>
+        The language with which we give instructions to the computer is known as a programming language. Programming languages consist of different keywords, variables, operators, loops, and other symbols. They facilitate communication between the computer and the user. Programming languages can be categorized into low-level and high-level languages.
+    </p>
+
+    <h5>1.2.2) Language Translator</h5>
+    <p>
+        A language translator is a special type of computer software that translates programs written in one language into another language. It is essential for both low-level and high-level languages. Language translators include compilers, interpreters, and assemblers.
+    </p>
+
+    <h3>2) Application Software</h3>
+    <p>
+        Application software is a set of one or more programs designed to perform specific tasks. It is created to fulfill user demands and directs a computer to solve user-oriented problems such as preparing bills, calculating mathematical equations, and preparing mark sheets. The software developed for user purposes is called application software. These types of software are generally developed using high-level languages. Examples include MS Excel, Photoshop, and billing software. There are two types of application software:
+    </p>
+
+    <h4>2.1) Packaged Software</h4>
+    <p>
+        Packaged software consists of a generalized set of programs designed for general purposes. It is generally large, error-free, advanced, and standard software with extensive functionality for special work. This type of software may not perfectly match the requirements of many organizations or users. They are developed and designed by reputed software companies, making them trustworthy but often expensive for small organizations. Examples include MS Office, Adobe, and Macromedia.
+    </p>
+
+    <h4>2.2) Customized / Tailored Software</h4>
+    <p>
+        Customized software is developed in a high-level language for specific tasks. This type of software is tailored for specific users or organizations, allowing for precise requirements to be met. They can be easily modified since they are created by local programmers. Examples include payroll systems, inventory management, school management, and billing software.
+    </p>
+
+    <h2>Operating System - Introduction</h2>
+    <p>
+        An operating system (OS) is an integrated set of programs that controls overall resources such as CPU, memory, and input-output devices of the computer system. The major objective of an operating system is to improve the performance and efficiency of a computer system. Like a manager in a company, an operating system is responsible for the smooth and efficient functioning of the entire computer system. The operating system provides a platform for other application programs/software to run and execute and offers users an interface for easy communication with the computer.
+    </p>
+    <p>
+        An operating system controls and coordinates the use of hardware among various application programs for different users, acting as an interface between the user and the computer hardware. The other major functions of an operating system include:
+    </p>
+    <ul>
+        <li>Controlling, monitoring, and coordinating the overall operation of the computer system.</li>
+        <li>Acting as an interface between the user and the computer.</li>
+        <li>Providing a platform to develop, run, and execute other computer programs.</li>
+        <li>Managing hardware resources such as CPU, memory, input-output terminals, and networking equipment.</li>
+        <li>Hiding programming and hardware complexity from the user.</li>
+    </ul>
+    <p>
+        The primary goal of an operating system is to maximize the productivity of a computer system by operating it efficiently while minimizing human intervention. Examples of operating systems include MS-DOS, Windows, Linux, macOS, UNIX, Chrome, Fedora, and Ubuntu.
+    </p>
+
+    <h2>Functions / Features / Advantages of Operating System (OS)</h2>
+    <ul>
+        <li><strong>Input-Output (I/O) Management:</strong> Essential for interaction with peripheral devices such as keyboard, mouse, printer, and scanner.</li>
+        <li><strong>User Interface (UI):</strong> Provides an environment for users to interact with the computer system, enhancing user experience.</li>
+        <li><strong>Security:</strong> Built-in tools to protect against security threats such as viruses and unauthorized access, including user accounts and passwords.</li>
+        <li><strong>Process Management:</strong> Allocates the CPU to execute chosen processes, acting as a traffic controller and job scheduler.</li>
+        <li><strong>Memory Management:</strong> Determines memory requirements for programs and allocates necessary memory, freeing up space when programs terminate.</li>
+        <li><strong>Data Management:</strong> Organizes data into logical groupings called files, providing flexibility and organization.</li>
+        <li><strong>Command Interpreter:</strong> Reads and interprets user commands, translating them into instructions the hardware can understand.</li>
+        <li><strong>Deadlock Prevention:</strong> Prevents situations where processes are unable to continue due to resource conflicts.</li>
+        <li><strong>Time Sharing:</strong> Allocates CPU time among multiple users on the same computer, enhancing user experience.</li>
+        <li><strong>Virtual Memory:</strong> Compensates for physical memory shortages by using disk space, allowing larger programs to run on systems with limited RAM.</li>
+    </ul>
+
+    <h2>Types of Operating System (OS)</h2>
+    <p>
+        Operating systems can be categorized based on processing, user interface, and user mode. Below are the types of operating systems:
+    </p>
+
+    <h3>A) On the Basis of Processing</h3>
+    <ul>
+        <li><strong>Multi-programming OS:</strong> Allows multiple user programs to be executed simultaneously by a single processor.</li>
+        <li><strong>Multi-tasking OS:</strong> Allows more than one program to run concurrently in a single-user system.</li>
+        <li><strong>Multiprocessing OS:</strong> Supports running programs on more than one CPU, enhancing execution speed.</li>
+        <li><strong>Time-sharing OS:</strong> Enables multiple users to use a computer simultaneously by sharing processor time.</li>
+        <li><strong>Batch processing OS:</strong> Groups similar jobs for processing without user interaction during execution.</li>
+        <li><strong>Multi-threading OS:</strong> Divides processes into multiple threads for concurrent execution.</li>
+        <li><strong>Real-time OS:</strong> Processes data quickly to affect the environment's functioning in real time.</li>
+        <li><strong>Online processing OS:</strong> Processes transactions as they occur, allowing user interaction during processing.</li>
+    </ul>
+
+    <h3>B) On the Basis of User Interface (UI)</h3>
+    <ul>
+        <li><strong>Character User Interface (CUI):</strong> Operates based on commands issued by the user, requiring users to remember commands.</li>
+        <li><strong>Graphical User Interface (GUI):</strong> Allows users to interact with applications using graphics, making it user-friendly and intuitive.</li>
+    </ul>
+
+    <h3>C) On the Basis of Mode of User</h3>
+    <ul>
+        <li><strong>Single User:</strong> Designed for use on a computer with only one user at a time.</li>
+        <li><strong>Multi User:</strong> Allows multiple users to access a single system with one OS from different terminals.</li>
+    </ul>
+
+    <h2>Some Important Operating Systems in Use</h2>
+    <h3>Open Source Operating System</h3>
+    <p>
+        Open source refers to applications whose source code is freely available to users. Users can customize the software according to their requirements without needing to buy a license. Examples include Linux, Unix, and Minix.
+    </p>
+
+    <h3>UNIX</h3>
+    <p>
+        UNIX is a powerful, flexible, and manageable operating system used in larger machines. It is multi-user, multi-tasking, and multi-processing, developed by AT&T Bell Labs around 1970. It has given birth to many other operating systems, such as Linux and Solaris.
+    </p>
+
+    <h3>Linux</h3>
+    <p>
+        Linux is an open-source, UNIX-based operating system that runs on various platforms. It was developed by Linus Torvalds and is popular for server systems. It is distributed through various distributions like Ubuntu, Fedora, and Debian.
+    </p>
+
+    <h3>MAC OS</h3>
+    <p>
+        MAC OS is a GUI-based operating system for Apple Inc., known for its high-quality graphical user interface. It is compatible with Intel processors and is widely used in Apple Macintosh computers.
+    </p>
+
+    <h2>Some Terminologies Related to OS</h2>
+    <h3>Spooling</h3>
+    <p>
+        Spooling is a process used to balance the difference in speed between high-speed CPUs and slow-speed input-output devices, primarily for printing purposes. It allows multiple files to be queued for printing while the CPU remains free for other tasks.
+    </p>
+
+    <h3>Process</h3>
+    <p>
+        A process is a program in execution. Unlike a program, which is static, a process is dynamic and can be in various states, including running, ready, and blocked.
+    </p>
+
+    <h3>Thread</h3>
+    <p>
+        A thread is a smaller subprocess of a program. Multi-threading allows multiple threads to execute simultaneously, minimizing the burden of context switching.
+    </p>
+
+    <h3>Scheduling</h3>
+    <p>
+        Scheduling decides which process to run first when multiple processes are ready. Types of scheduling include priority scheduling and time-sharing scheduling.
+    </p>
+
+    <h3>Buffering</h3>
+    <p>
+        Buffering uses a small, high-speed storage device (buffer) to hold data temporarily during input/output operations, allowing for smoother processing.
+    </p>
+
+    <h3>Virtual Memory</h3>
+    <p>
+        Virtual memory allows an operating system to compensate for physical memory shortages by using disk space to temporarily store data, enabling larger programs to run on systems with limited RAM.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        This chapter covers essential concepts related to computer software and operating systems, highlighting their functions, types, and terminologies. Understanding these concepts is crucial for anyone working with computer systems.
+    </p>
+</body>
+</html>
