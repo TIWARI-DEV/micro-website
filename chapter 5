@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Programming Concepts and Logics</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light background color */
+            color: #000; /* Black text */
+        }
+        h1, h2, h3 {
+            color: #333; /* Darker text for headings */
+            animation: fadeIn 1s ease-in;
+        }
+        p {
+            line-height: 1.6;
+            animation: slideIn 1s ease-in;
+        }
+        ul {
+            animation: slideIn 1s ease-in;
+            margin-left: 20px;
+        }
+        pre {
+            background-color: #e9ecef;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0; /* Light gray header */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 5: Programming Concepts and Logics</h1>
+
+    <h2>Introduction</h2>
+    <p>
+        As we know, every computerized device does not work by itself. They need to be given some sort of command that makes the computer work. These commands help to instruct the computer to perform specific actions required by the user. Since the commands are given in the form of a computer language, we use programming languages to write the set of instructions that command the computer to perform certain actions, collectively called programs. These programs are integrated to make complete software. Simply put, software is a collection of different interrelated programs that perform specific functions.
+    </p>
+
+    <p>
+        Programs written in any type of programming language are not understood by the computer; hence we need some sort of language translator or processor such as an assembler, compiler, and interpreter, which have the basic function of converting programs written in any type of language into machine-level language.
+    </p>
+
+    <p>
+        The program written by the programmer is known as a source program. After converting, it becomes an object program.
+    </p>
+
+    <h3>Qualities of Good Programs</h3>
+    <ul>
+        <li>It should be easily understood.</li>
+        <li>A program should be correct; it should be error-free.</li>
+        <li>It should be reliable.</li>
+        <li>It should have an easily understandable user interface.</li>
+        <li>It should be portable and flexible.</li>
+    </ul>
+    <div style="text-align: center;">
+        <img src="img11.jpg" alt="Description of image 1" style="display: inline-block; width: 30%; margin-right: 10px;">
+        <img src="img12.jpg" alt="Description of image 2" style="display: inline-block; width: 30%; margin-right: 10px;">
+        <img src="img13.png" alt="Description of image 3" style="display: inline-block; width: 30%;">
+    </div>
+    <h3>Programming Language</h3>
+    <p>
+        In order to communicate between the user and the computer, we need a computer language that helps the user generate commands to perform as required. This language, with which we can give instructions to the computer, is known as a programming language. Programming languages consist of different keywords, variables, operators, loops, and other entities using various character sets, including numbers, special symbols, and alphanumeric values.
+    </p>
+
+    <p>
+        Hence, the process of writing in a programming language is known as programming, and the person who writes programs is called a programmer.
+    </p>
+
+    <h3>Types of Programming Languages</h3>
+    <h4>1. Low-Level Language</h4>
+    <p>
+        Low-level languages are machine-dependent languages, meaning programs written for one type of system cannot run on another. Developers should have detailed knowledge about the system for which they are writing a program. Programming in low-level languages is difficult and time-consuming. Different types of low-level programming languages are:
+    </p>
+    <ul>
+        <li><strong>Machine Level Language (1GL):</strong> This language consists of a sequence of 0’s and 1’s to generate instructions. Since it uses binary numbers, this type of language is directly understood by the processor, resulting in higher execution speed. It is machine-dependent, and programmers need detailed knowledge of the system.</li>
+        <li>Advantages:
+            <ul>
+                <li>Directly understood by the processor, resulting in high execution speed.</li>
+                <li>Language translator or processor is not needed.</li>
+                <li>Can be used to program specific-purpose computers.</li>
+            </ul>
+        </li>
+        <li>Disadvantages:
+            <ul>
+                <li>Difficult and time-consuming to develop and debug programs.</li>
+                <li>Machine-dependent language, so programs developed for one system cannot be operated on another.</li>
+                <li>All syntax and commands are in binary numbers, which is difficult to remember.</li>
+                <li>Programmers must have detailed knowledge about a specific system and its architecture.</li>
+            </ul>
+        </li>
+        <li><strong>Assembly Language (2GL):</strong> This language uses mnemonics (symbolic instructions) like ADD, SUB, RST, DIV, MOD instead of writing instructions in binary. It is closer to machine-level language but still requires a language translator like an assembler to convert it into machine-level language.</li>
+        <li>Advantages:
+            <ul>
+                <li>Easier to write, debug, and understand compared to machine-level language.</li>
+                <li>Higher program execution speed compared to high-level languages.</li>
+                <li>Machine-dependent, used to develop device drivers.</li>
+            </ul>
+        </li>
+        <li>Disadvantages:
+            <ul>
+                <li>Machine-dependent language; programs made for one processor do not run on another.</li>
+                <li>Use of mnemonic codes makes assembly language more complex.</li>
+                <li>Development and debugging are more difficult and time-consuming compared to high-level languages.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>2. High-Level Language</h4>
+    <p>
+        High-level languages are closer to English, using English-like structures and mathematical notation. They are easier to develop and debug and are machine-independent. Since high-level languages are not directly understood by computers, a language processor or translator such as a compiler or interpreter is needed to convert programs written in high-level language to machine-level language. FORTRAN (Formula Translator), introduced in 1956, is the first high-level language. Nowadays, many high-level languages like C, C++, Python, JavaScript, etc., are widely used.
+    </p>
+    <ul>
+        <li>Advantages:
+            <ul>
+                <li>Closer to English, making programs easier to write, debug, and understand.</li>
+                <li>Machine-independent, allowing programs written for one processor to work on another.</li>
+                <li>Programmers do not need to remember many mnemonics and unusual codes.</li>
+                <li>Faster program development and requires less effort than other languages.</li>
+            </ul>
+        </li>
+        <li>Disadvantages:
+            <ul>
+                <li>Computers do not understand high-level languages directly, requiring conversion before execution.</li>
+                <li>Program execution is slower compared to low-level languages.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>High-level languages can be further classified into:</p>
+    <ul>
+        <li><strong>Procedural Oriented Language (3GL):</strong> Focuses on procedures rather than data. Examples: C, FORTRAN, QBasic.</li>
+        <li><strong>Problem/Object Oriented Language (4GL):</strong> Focuses on data rather than procedures. Examples: C#, C++, Java.</li>
+        <li><strong>Natural Language (5GL):</strong> Uses simple statements resembling normal sentences. An example is PROLOG.</li>
+    </ul>
+
+    <h3>Language Translator/Processor</h3>
+    <p>
+        Language translators convert programs written in assembly or high-level language (source program) into machine-level language (object program). Types of language translators include:
+    </p>
+    <ul>
+        <li><strong>Assembler:</strong> Converts assembly language programs into machine-level language.</li>
+        <li><strong>Compiler:</strong> Converts high-level language programs into machine-level language all at once.</li>
+        <li><strong>Interpreter:</strong> Converts high-level language programs into machine-level language one statement at a time.</li>
+    </ul>
+
+    <h3>Difference Between Compiler and Interpreter</h3>
+    <table>
+        <tr>
+            <th>Compiler</th>
+            <th>Interpreter</th>
+        </tr>
+        <tr>
+            <td>Translates the whole program into object code at once.</td>
+            <td>Translates one line or a single statement of a program into object code at a time.</td>
+        </tr>
+        <tr>
+            <td>Finds errors after compiling the complete program.</td>
+            <td>Finds errors after translating a line of the program at a time.</td>
+        </tr>
+        <tr>
+            <td>The translating process is incredibly faster.</td>
+            <td>The translating process is slower.</td>
+        </tr>
+        <tr>
+            <td>Compiler-based programs are difficult to code and debug.</td>
+            <td>Interpreter-based programs are easier to code and debug.</td>
+        </tr>
+        <tr>
+            <td>Usually requires larger memory space.</td>
+            <td>Usually requires less memory space.</td>
+        </tr>
+        <tr>
+            <td>Examples: C, C++, Java, FORTRAN.</td>
+            <td>Examples: BASIC, C#, PHP.</td>
+        </tr>
+    </table>
+
+    <h3>Syntax and Semantics</h3>
+    <p>
+        Programming languages help users communicate with the computer through a set of codes that instruct the computer to perform specific tasks. This structure of codes is known as syntax, while the meaning attached to individual words or symbols in a programming language is known as semantics. For example:
+    </p>
+    <pre>
+In QBasic:
+Print "This is programming"; P
+    </pre>
+    <p>
+        Here, <strong>Print</strong> is semantics, and the whole line represents syntax.
+    </p>
+
+    <h3>Error (BUG)</h3>
+    <p>
+        An error in a program is known as a bug. Bugs may arise from not following the proper rules of the programming language, poor problem analysis, or even hardware failure. The process of removing errors from a program is known as debugging. There are three types of errors:
+    </p>
+    <ul>
+        <li><strong>Syntax Error:</strong> Arises from not following the proper syntax of the programming language.</li>
+        <li><strong>Logical Error:</strong> Occurs when the logic of the program is flawed, leading to incorrect results.</li>
+        <li><strong>Runtime Error:</strong> Happens when the program is executing and encounters a problem, like insufficient memory.</li>
+    </ul>
+
+    <h3>Common Terminology in Programming</h3>
+    <ul>
+        <li><strong>Data Types:</strong> Specifies the type of data used in a program (e.g., numeric, character).</li>
+        <li><strong>Variable:</strong> Holds values that can change during program execution.</li>
+        <li><strong>Constant:</strong> Holds values that do not change during program execution.</li>
+        <li><strong>Operators:</strong> Symbols used to perform operations on operands (e.g., arithmetic, logical).</li>
+        <li><strong>Library Functions:</strong> Predefined functions available in the C library (e.g., printf, scanf).</li>
+    </ul>
+
+    <h3>Input/Output (I/O) Functions</h3>
+    <ul>
+        <li><strong>printf():</strong> A formatted output function.</li>
+        <li><strong>scanf():</strong> Used to enter values into the program.</li>
+    </ul>
+
+    <h3>Programming Examples</h3>
+    <p>Below are some example programs written in C:</p>
+    <pre>
+#include <stdio.h>
+void main() {
+    int a, b, s;
+    printf("Enter First Number: ");
+    scanf("%d", &a);
+    printf("Enter Second Number: ");
+    scanf("%d", &b);
+    s = a + b;
+    printf("The sum is %d", s);
+}
+    </pre>
+
+    <h2>Control Structure in C</h2>
+    <p>
+        Control structures allow us to change the normal flow of program execution. They are categorized into three types: sequence, selection, and looping.
+    </p>
+
+    <h3>A) Sequence</h3>
+    <p>
+        The program generally flows from top to bottom. Example:
+    </p>
+    <pre>
+#include <stdio.h>
+void main() {
+    int l, b, h, tsa;
+    printf("Enter length, breadth and height: ");
+    scanf("%d %d %d", &l, &b, &h);
+    tsa = 2 * (l*b + b*h + l*h);
+    printf("Total surface area is %d", tsa);
+}
+    </pre>
+
+    <h3>B) Selection</h3>
+    <p>
+        Selection control structures change the flow based on conditions. Examples include if, if-else, and if-else-if statements.
+    </p>
+    <pre>
+#include <stdio.h>
+void main() {
+    float e;
+    printf("Enter English Marks: ");
+    scanf("%f", &e);
+    if (e >= 40) {
+        printf("Pass");
+    } else {
+        printf("Fail");
+    }
+}
+    </pre>
+
+    <h3>C) Looping</h3>
+    <p>
+        Loops allow for repeated execution of a block of statements. Types include for loop, while loop, and do-while loop.
+    </p>
+    <pre>
+#include <stdio.h>
+int main() {
+    int n, s=0, i=1;
+    printf("Enter any number: ");
+    scanf("%d", &n);
+    while (i <= n) {
+        s = s + i;
+        i = i + 1;
+    }
+    printf("Sum of digits is %d\n", s);
+    return 0;
+}
+    </pre>
+
+    <h2>Array</h2>
+    <p>
+        An array is a collection of variables of the same type, represented by a common name. Arrays can be one-dimensional or multi-dimensional.
+    </p>
+
+    <h3>1-Dimension Array</h3>
+    <pre>
+#include <stdio.h>
+int main() {
+    int a[10], i;
+    printf("Enter any 10 numbers: ");
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &a[i]);
+    }
+    for (i = 0; i < 10; i++) {
+        printf("%d ", a[i]);
+    }
+    return 0;
+}
+    </pre>
+
+    <h3>N-Dimension Array</h3>
+    <pre>
+#include <stdio.h>
+int main() {
+    int a[3][3], i, j;
+    printf("Enter 9 numbers: ");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d\t", a[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    </pre>
+
+    <h2>String</h2>
+    <p>
+        A string is a group of characters that can be represented only by a character array. To represent a character/string, we use the ‘char’ datatype.
+    </p>
+    <pre>
+char a = 'x';
+char a[5] = "hello"; // One-dimensional character array
+    </pre>
+
+    <h3>String Handling Functions</h3>
+    <p>
+        String handling functions are library functions used to manipulate strings in C, defined under the header file <code>string.h</code>. Some important functions include:
+    </p>
+    <ul>
+        <li><strong>strlen():</strong> Returns the total number of characters in a string.</li>
+        <li><strong>strrev():</strong> Returns the reverse of a given string.</li>
+        <li><strong>strlwr():</strong> Converts a string to lowercase.</li>
+        <li><strong>strupr():</strong> Converts a string to uppercase.</li>
+        <li><strong>strcpy():</strong> Copies one string to another.</li>
+        <li><strong>strcat():</strong> Concatenates two strings.</li>
+        <li><strong>strcmp():</strong> Compares two strings.</li>
+    </ul>
+
+    <h3>Example: Check if a String is Palindrome</h3>
+    <pre>
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+int main() {
+    char a[10], b[10];
+    printf("Enter string: ");
+    scanf("%s", a);
+    strcpy(b, a);
+    strrev(a);
+    if (strcmp(a, b) == 0) {
+        printf("%s is palindrome\n", b);
+    } else {
+        printf("%s is not palindrome\n", b);
+    }
+    return 0;
+}
+    </pre>
+</body>
+</html>
