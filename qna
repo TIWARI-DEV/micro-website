@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Society in Nepal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Creating a Digital Society in Nepal</h1>
+
+        <h2>What challenges are we facing to create a digital society in the Nepalese context?</h2>
+        <p>Creating a digital society in Nepal faces several challenges, including limited internet accessibility, especially in rural areas. There is also a significant gap in digital literacy among the population, which hinders effective use of technology. Inadequate infrastructure and resources further complicate the situation, making it difficult to implement digital initiatives. Additionally, cybersecurity concerns pose risks that can discourage users from engaging with digital platforms. Lastly, regulatory issues can create barriers to innovation and investment in the digital space.</p>
+
+        <h2>What is computer ethics? What are the commandments of computer ethics?</h2>
+        <p>Computer ethics refers to the set of moral principles that govern the use of computers and technology. It emphasizes the responsibility of users to act ethically while using digital resources. The commandments of computer ethics include respecting the privacy of others, not using technology to harm individuals, and properly attributing the intellectual property of others. These guidelines help foster a respectful and secure digital environment. Adhering to these principles also promotes trust among users in various digital interactions.</p>
+
+        <h2>Discuss the role of computer ethics in the formulation of a secure and reliable digital society.</h2>
+        <p>Computer ethics plays a crucial role in establishing a secure digital society by promoting responsible behavior among users. It encourages individuals and organizations to prioritize user privacy and data protection, which fosters trust in digital services. By adhering to ethical guidelines, users can mitigate risks associated with cybercrime and misuse of technology. This ethical framework also supports the development of policies and regulations that ensure the security and reliability of digital systems. Ultimately, a strong ethical foundation contributes to a more resilient digital society.</p>
+
+        <h2>Explain the basic principles/components of information security.</h2>
+        <p>Information security is built on three core principles: confidentiality, integrity, and availability. Confidentiality ensures that sensitive information is accessible only to authorized users, protecting against unauthorized access. Integrity involves maintaining the accuracy and completeness of data, preventing unauthorized alterations. Availability guarantees that information and resources are accessible to authorized users when needed, ensuring operational efficiency. Together, these principles form the foundation for effective information security management.</p>
+
+        <h2>Define cyber law. What are the major fields of cyber law?</h2>
+        <p>Cyber law encompasses the legal regulations and standards that govern the use of the internet and digital technologies. It addresses issues related to online activities, digital transactions, and data protection. Major fields of cyber law include data protection laws that safeguard personal information, cybercrime laws that penalize illegal online activities, and laws governing electronic contracts and transactions. Additionally, intellectual property rights related to digital content are also covered under cyber law. These legal frameworks help ensure a safe and secure digital environment for users.</p>
+
+        <h2>How do you know that your computer has been a victim of a malware attack?</h2>
+        <p>Signs of a malware attack can include a noticeable slowdown in computer performance and frequent application crashes. Users may also encounter unexpected pop-up ads or notifications that disrupt normal use. Unauthorized access to files or changes in settings without user consent can indicate compromise. Additionally, unfamiliar programs or processes running in the background may suggest malware presence. Recognizing these indicators is crucial for timely remediation and protection against further damage.</p>
+
+        <h2>How can you protect your computer system from cybercrime?</h2>
+        <p>Protecting your computer system from cybercrime involves multiple strategies, starting with installing reputable antivirus software to detect and remove threats. Regularly updating your operating system and applications ensures you have the latest security patches. Employing strong, unique passwords and enabling two-factor authentication adds an extra layer of security. Practicing safe browsing habits, such as avoiding suspicious links and downloads, is also essential. Regularly backing up important data helps mitigate loss in case of an attack.</p>
+
+        <h2>What are the advantages and disadvantages of a digital society?</h2>
+        <p>The advantages of a digital society include increased access to information and services, which can enhance education and economic opportunities. Improved communication technologies facilitate connections across distances, fostering collaboration and innovation. However, disadvantages include cybersecurity risks, such as data breaches and identity theft, which can undermine user trust. Additionally, the digital divide remains a significant issue, as not everyone has equal access to technology and the internet. Balancing these pros and cons is critical for a thriving digital society.</p>
+
+        <h2>Explain various areas that are generally covered in cyber law.</h2>
+        <p>Cyber law covers a diverse range of areas that regulate online activities and protect users. Data protection laws ensure the privacy and security of personal information collected and processed by organizations. Cybercrime regulations address offenses like hacking, identity theft, and online fraud, establishing penalties for perpetrators. The law also governs electronic contracts, ensuring that digital agreements are legally binding. Additionally, intellectual property laws protect copyrights and trademarks in the digital realm, promoting respect for creators' rights.</p>
+
+        <h2>Explain cyber law in Nepal with major provisions included.</h2>
+        <p>Cyber law in Nepal is primarily governed by the Information Technology Act, which aims to regulate electronic commerce and ensure cybersecurity. Major provisions include penalties for cybercrimes such as hacking and data breaches, as well as guidelines for protecting personal data. The law also addresses electronic signatures, facilitating secure digital transactions. Furthermore, it aims to promote awareness and education regarding cybersecurity issues among users. Overall, these provisions help create a safer digital environment in Nepal.</p>
+
+        <h2>List out the major objectives of ICT Policy 2072.</h2>
+        <p>The ICT Policy 2072 aims to enhance digital literacy across various segments of society, ensuring that individuals are equipped to use technology effectively. It seeks to develop robust ICT infrastructure to support the growing demand for digital services. Ensuring cybersecurity is a key objective, promoting safe online practices and protecting users' data. The policy also emphasizes fostering innovation in technology by encouraging research and development. Finally, it aims to expand internet access, particularly in rural and underserved areas, bridging the digital divide.</p>
+
+        <h2>Explain at least ten activities that are considered as cybercrime.</h2>
+        <p>Cybercrime encompasses a wide range of illegal activities conducted through computer systems or the internet. Common activities include hacking, where individuals gain unauthorized access to systems to steal data or cause harm. Identity theft involves stealing personal information to impersonate someone for financial gain. Phishing scams trick users into revealing sensitive information through deceptive emails or websites. Malware distribution spreads harmful software designed to damage or disrupt systems. Other activities include denial-of-service attacks, online harassment, credit card fraud, copyright infringement, and cyberbullying, all of which undermine the security and trust in digital spaces.</p>
+
+        <h2>How can you defend your computer from malicious software? Explain any ten malicious software attacks.</h2>
+        <p>Defending against malicious software involves several proactive measures. Using reputable antivirus software helps detect and remove threats before they cause harm. Regularly updating software ensures vulnerabilities are patched, reducing infection risks. Avoiding suspicious email links and attachments is crucial, as these are common infection vectors. Employing strong passwords and enabling firewalls provides additional layers of security. Ten types of malicious software include viruses, which replicate and spread; worms, which self-replicate over networks; Trojans, which disguise as legitimate software; ransomware, which encrypts files for ransom; spyware, which secretly monitors user activity; adware, which displays unwanted ads; rootkits, which gain root access undetected; keyloggers, which capture keystrokes; botnets, which control infected devices; and scareware, which deceives users into purchasing fake security software.</p>
+
+        <h2>What legal provisions do we have in Nepal to preserve intellectual property rights?</h2>
+        <p>In Nepal, intellectual property rights are protected by various legal frameworks, notably the Copyright Act and the Patent, Design and Trademark Act. The Copyright Act safeguards the rights of creators over their original works, including literature, music, and software. The Patent Act provides exclusive rights to inventors for their inventions, encouraging innovation by preventing unauthorized use. Similarly, the Design and Trademark Act protects distinctive signs and designs, ensuring brand integrity. These laws collectively promote respect for intellectual property, fostering a culture of creativity and innovation in the country.</p>
+
+        <h2>Explain digital signature along with its working mechanism.</h2>
+        <p>A digital signature is a cryptographic method that verifies the authenticity and integrity of digital messages or documents. It works by creating a unique hash of the data using a hashing algorithm. This hash is then encrypted with the sender's private key, creating the digital signature. Upon receipt, the recipient can decrypt the signature using the sender's public key to retrieve the hash. By comparing the decrypted hash with a newly generated hash of the received data, the recipient can confirm the message's authenticity and that it hasn't been altered. This process enhances security and trust in digital communications.</p>
+
+        <h2>Explain any ten policies included in ICT Policy 2072.</h2>
+        <p>The ICT Policy 2072 outlines various strategies to enhance Nepal's digital landscape. One policy promotes e-governance, leveraging technology to improve public service delivery. Another emphasizes digital literacy, ensuring that citizens can effectively use technology. The policy also aims to develop ICT infrastructure to support growing digital needs. Ensuring cybersecurity is critical, with measures to protect data and users from cyber threats. Additionally, the policy encourages local software development to boost the tech industry. Public-private partnerships are promoted to foster innovation and investment in ICT. Expanding internet access in rural areas addresses the digital divide. The policy also supports research and development in technology sectors. Lastly, it emphasizes using ICT in education and health to improve service quality.</p>
+        
+    </div>
+</body>
+</html>
