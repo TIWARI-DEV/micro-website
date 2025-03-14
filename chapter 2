@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Number System, Conversion and Boolean Logic</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light background color */
+            color: #000; /* Black text */
+        }
+        h1, h2, h3 {
+            color: #333; /* Darker text for headings */
+            animation: fadeIn 1s ease-in;
+        }
+        p {
+            line-height: 1.6;
+            animation: slideIn 1s ease-in;
+        }
+        ul {
+            animation: slideIn 1s ease-in;
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0; /* Light gray header */
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff0000; /* Highlight main points in red */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 2: Number System, Conversion and Boolean Logic</h1>
+     <img src="img4.jpg"  width="1000px" height="500px" alt="image">
+     <img src="img5.png"  width="1000px" height="500px" alt="image">
+    <h2>1's and 2's Complement</h2>
+
+    <h3>1's Complement</h3>
+    <p>
+        The 1's complement of a binary number is obtained by flipping all bits; that is, converting 1s to 0s and 0s to 1s. 
+        For example, the 1's complement of <strong>(1011)<sub>2</sub></strong> is <strong>(0100)<sub>2</sub></strong>.
+    </p>
+
+    <h3>2's Complement</h3>
+    <p>
+        The 2's complement is found by adding 1 to the 1's complement of a given binary number. 
+        For example, if <strong>(1010)<sub>2</sub></strong> is a given number, then its 1's complement is <strong>(0101)<sub>2</sub></strong> 
+        and the 2's complement is <strong>(0101)<sub>2</sub> + (1)<sub>2</sub> = (0110)<sub>2</sub></strong>.
+    </p>
+
+    <h2>Subtraction using 1's and 2's Complement</h2>
+    <p>Rules to remember when subtracting <strong>X - Y</strong>:</p>
+    <table>
+        <tr>
+            <th>Using 1's Complement</th>
+            <th>Using 2's Complement</th>
+        </tr>
+        <tr>
+            <td>Calculate 1's complement of <strong>Y</strong></td>
+            <td>Calculate 2's complement of <strong>Y</strong></td>
+        </tr>
+        <tr>
+            <td>Add result of step 1 with <strong>X</strong></td>
+            <td>Add result of step 1 with <strong>X</strong></td>
+        </tr>
+        <tr>
+            <td>If there is an extra bit, remove that extra bit and add it to the remaining bits.</td>
+            <td>If there is an extra bit, remove that extra bit.</td>
+        </tr>
+        <tr>
+            <td>If there is no extra bit, find 1's complement of the result in step 2 and add a negative sign.</td>
+            <td>If there is no extra bit, find 2's complement of the result in step 2 and add a negative sign.</td>
+        </tr>
+    </table>
+
+    <h3>Example 1: Subtract (1000)<sub>2</sub> from (111)<sub>2</sub> using 1's and 2's complement.</h3>
+    <p>
+        Given: <strong>(111)<sub>2</sub> - (1000)<sub>2</sub></strong>
+    </p>
+    <h4>A) Using 1's Complement</h4>
+    <p>
+        1's complement of <strong>(1000)<sub>2</sub></strong> is <strong>(0111)<sub>2</sub></strong>. 
+        Adding <strong>(0111)<sub>2</sub></strong> with <strong>(111)<sub>2</sub></strong> gives:
+    </p>
+    <p>
+        <strong>(0111)<sub>2</sub> + (0111)<sub>2</sub> = (1110)<sub>2</sub></strong>
+    </p>
+    <p>
+        Since there is no extra bit, find the 1's complement of <strong>(1110)<sub>2</sub></strong>, which is <strong>(0001)<sub>2</sub></strong>, and add a negative sign:
+    </p>
+    <p>Result: <strong>-(0001)<sub>2</sub></strong></p>
+
+    <h4>B) Using 2's Complement</h4>
+    <p>
+        2's complement of <strong>(1000)<sub>2</sub></strong> is <strong>(0111)<sub>2</sub></strong> + <strong>(1)<sub>2</sub></strong> = <strong>(1000)<sub>2</sub></strong>.
+        Adding <strong>(1000)<sub>2</sub></strong> with <strong>(111)<sub>2</sub></strong> gives:
+    </p>
+    <p>
+        <strong>(1000)<sub>2</sub> + (0111)<sub>2</sub> = (1111)<sub>2</sub></strong>
+    </p>
+    <p>
+        Since there is no extra bit, find the 2's complement of <strong>(1111)<sub>2</sub></strong>, which is <strong>(0000)<sub>2</sub> + (1)<sub>2</sub> = (0001)<sub>2</sub></strong>, and add a negative sign:
+    </p>
+    <p>Result: <strong>-(0001)<sub>2</sub></strong></p>
+
+    <h3>Example 2: Subtract (11001)<sub>2</sub> from (11101)<sub>2</sub> using 1's and 2's complement.</h3>
+    <p>
+        Given: <strong>(11101)<sub>2</sub> - (11001)<sub>2</sub></strong>
+    </p>
+    <h4>A) Using 1's Complement</h4>
+    <p>
+        1's complement of <strong>(11001)<sub>2</sub></strong> is <strong>(00110)<sub>2</sub></strong>.
+        Adding <strong>(00110)<sub>2</sub></strong> with <strong>(11101)<sub>2</sub></strong> gives:
+    </p>
+    <p>
+        <strong>(00110)<sub>2</sub> + (11101)<sub>2</sub> = (100011)<sub>2</sub></strong>
+    </p>
+    <p>
+        Since there is an extra bit, we remove it and add it:
+    </p>
+    <p>
+        <strong>(00011)<sub>2</sub> + (1)<sub>2</sub> = (00100)<sub>2</sub></strong>
+    </p>
+    <p>Result: <strong>(00100)<sub>2</sub></strong></p>
+
+    <h4>B) Using 2's Complement</h4>
+    <p>
+        2's complement of <strong>(11001)<sub>2</sub></strong> is <strong>(00110)<sub>2</sub></strong> + <strong>(1)<sub>2</sub></strong> = <strong>(00111)<sub>2</sub></strong>.
+        Adding <strong>(00111)<sub>2</sub></strong> with <strong>(11101)<sub>2</sub></strong> gives:
+    </p>
+    <p>
+        <strong>(00111)<sub>2</sub> + (11101)<sub>2</sub> = (100100)<sub>2</sub></strong>
+    </p>
+    <p>
+        Since there is an extra bit, we remove it:
+    </p>
+    <p>Result: <strong>(00100)<sub>2</sub></strong></p>
+
+    <h2>Introduction: Boolean Logic</h2>
+    <p>
+        Boolean Algebra is the algebra of logic that deals with binary variables and logical operations. As all data are represented in binary values, we need to manipulate these values using certain rules and expressions through Boolean algebra. It is a fundamental method for analyzing and designing logic circuits, introduced by the English mathematician George Boole.
+    </p>
+    <p>
+        In Boolean algebra, variables can have only one of two possible values: 0 or 1 (False or True). Every modern digital computer understands these two values.
+    </p>
+
+    <h3>Boolean Algebra</h3>
+    <p>
+        Boolean algebra is the algebra of logic that accepts either of the two values (0 and 1) and generates a result through logical relationships and operations.
+    </p>
+
+    <h3>Boolean Variables</h3>
+    <p>
+        Boolean variables are entities that can have either 0 or 1, representing specific operations. They are denoted by letters such as A, B, P, Q, X, Y, Z, etc.
+    </p>
+
+    <h3>Boolean Functions (Logic Functions)</h3>
+    <p>
+        A Boolean function is an expression formed by binary variables, binary operators (AND, OR, NOT), parentheses, and equal signs. For a given set of values, this Boolean function yields a result of either 0 or 1.
+    </p>
+    <p>
+        For example, <strong>F = XYZ' + XY</strong>, where F is a Boolean function, and X, Y, Z are Boolean variables.
+    </p>
+
+    <h3>Truth Table</h3>
+    <p>
+        A truth table represents the input-output relationship for each logical gate. It shows the relationship between input and output in a tabular form, summarizing the results of logical operations on all possible combinations of logical values.
+    </p>
+
+    <h2>Boolean Operators and Operands</h2>
+    <p>
+        Operators are symbols that define specific operations. The three basic operators used in Boolean Algebra are AND, OR, and NOT. All other operations can be expressed in terms of these basic operations.
+    </p>
+
+    <h3>a. AND Operator</h3>
+    <p>
+        The AND operator is represented by “.”. The result of the AND operation is the same as simple arithmetic multiplication. The result will be high (1) only when both inputs are high. 
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y = A.B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h3>b. OR Operator</h3>
+    <p>
+        The OR operator is represented by “+”. The result of the OR operation is the same as simple arithmetic addition. The result will be low (0) only when both inputs are low.
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y = A + B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h3>c. NOT Operator</h3>
+    <p>
+        The NOT operator is represented by “-” or “’”. The NOT operation performs negation, giving high output (1) for low input (0) and vice-versa.
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>A'</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <h2>Logic Gates</h2>
+    <p>
+        A logic gate is an electronic circuit that operates on one or more inputs to produce an output. Logic gates are fundamental components of modern digital computers. Each gate has its specific function and graphical symbol. Below are the basic logic gates:
+    </p>
+
+    <h3>a. AND Gate</h3>
+    <p>
+        The AND gate produces a high output (1) only when both inputs are high. Graphically, it is represented as:
+    </p>
+    <p>Algebraically, output is expressed as: <strong>Y = A.B</strong></p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y = A.B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h3>b. OR Gate</h3>
+    <p>
+        The OR gate produces low output (0) only when all inputs are low (0) and produces high output (1) for every possible combination of 0 and 1. Graphically, it is represented as:
+    </p>
+    <p>Algebraically, output is represented as: <strong>Y = A + B</strong></p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y = A + B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h3>c. NOT Gate</h3>
+    <p>
+        The NOT gate produces the complement of its input. It has a single input and output. Graphically, it is represented as:
+    </p>
+    <p>Algebraically, output is represented as: <strong>Y = A'</strong></p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>A'</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <h3>d. NAND Gate</h3>
+    <p>
+        The NAND gate is a derived gate from the AND gate and produces low output (0) only when both inputs are high (1). Graphically, it is represented as:
+    </p>
+    <p>Algebraically, output is represented as: <strong>Y = (A.B)' </strong></p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A.B</th>
+            <th>Y = (A.B)'</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Number System, Conversion and Boolean Logic</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light background color */
+            color: #000; /* Black text */
+        }
+        h1, h2, h3 {
+            color: #333; /* Darker text for headings */
+            animation: fadeIn 1s ease-in;
+        }
+        p {
+            line-height: 1.6;
+            animation: slideIn 1s ease-in;
+        }
+        ul {
+            animation: slideIn 1s ease-in;
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0; /* Light gray header */
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff0000; /* Highlight main points in red */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 2: Number System, Conversion and Boolean Logic</h1>
+
+    <h2>1's and 2's Complement</h2>
+
+    <h3>1's Complement</h3>
+    <p>
+        The 1's complement of a binary number is obtained by flipping all bits; that is, converting 1s to 0s and 0s to 1s. 
+        For example, the 1's complement of <strong>(1011)<sub>2</sub></strong> is <strong>(0100)<sub>2</sub></strong>.
+    </p>
+
+    <h3>2's Complement</h3>
+    <p>
+        The 2's complement is found by adding 1 to the 1's complement of a given binary number. 
+        For example, if <strong>(1010)<sub>2</sub></strong> is a given number, then its 1's complement is <strong>(0101)<sub>2</sub></strong> 
+        and the 2's complement is <strong>(0101)<sub>2</sub> + (1)<sub>2</sub> = (0110)<sub>2</sub></strong>.
+    </p>
+
+    <h2>Subtraction using 1's and 2's Complement</h2>
+    <p>Rules to remember when subtracting <strong>X - Y</strong>:</p>
+    <table>
+        <tr>
+            <th>Using 1's Complement</th>
+            <th>Using 2's Complement</th>
+        </tr>
+        <tr>
+            <td>Calculate 1's complement of <strong>Y</strong></td>
+            <td>Calculate 2's complement of <strong>Y</strong></td>
+        </tr>
+        <tr>
+            <td>Add result of step 1 with <strong>X</strong></td>
+            <td>Add result of step 1 with <strong>X</strong></td>
+        </tr>
+        <tr>
+            <td>If there is an extra bit, remove that extra bit and add it to the remaining bits.</td>
+            <td>If there is an extra bit, remove that extra bit.</td>
+        </tr>
+        <tr>
+            <td>If there is no extra bit, find 1's complement of the result in step 2 and add a negative sign.</td>
+            <td>If there is no extra bit, find 2's complement of the result in step 2 and add a negative sign.</td>
+        </tr>
+    </table>
+
+    <h3>Example 1: Subtract (1000)<sub>2</sub> from (111)<sub>2</sub> using 1's and 2's complement.</h3>
+    <p>
+        Given: <strong>(111)<sub>2</sub> - (1000)<sub>2</sub></strong>
+    </p>
+    <h4>A) Using 1's Complement</h4>
+    <p>
+        1's complement of <strong>(1000)<sub>2</sub></strong> is <strong>(0111)<sub>2</sub></strong>. 
+        Adding <strong>(0111)<sub>2</sub></strong> with <strong>(111)<sub>2</sub></strong> gives:
+    </p>
+    <p>
+        <strong>(0111)<sub>2</sub> + (0111)<sub>2</sub> = (1110)<sub>2</sub></strong>
+    </p>
+    <p>
+        Since there is no extra bit, find the 1's complement of <strong>(1110)<sub>2</sub></strong>, which is <strong>(0001)<sub>2</sub></strong>, and add a negative sign:
+    </p>
+    <p>Result: <strong>-(0001)<sub>2</sub></strong></p>
+
+    <h4>B) Using 2's Complement</h4>
+    <p>
+        2's complement of <strong>(1000)<sub>2</sub></strong> is <strong>(0111)<sub>2</sub></strong> + <strong>(1)<sub>2</sub></strong> = <strong>(1000)<sub>2</sub></strong>.
+        Adding <strong>(1000)<sub>2</sub></strong> with <strong>(111)<sub>2</sub></strong> gives:
+    </p>
+    <p>
+        <strong>(1000)<sub>2</sub> + (0111)<sub>2</sub> = (1111)<sub>2</sub></strong>
+    </p>
+    <p>
+        Since there is no extra bit, find the 2's complement of <strong>(1111)<sub>2</sub></strong>, which is <strong>(0000)<sub>2</sub> + (1)<sub>2</sub> = (0001)<sub>2</sub></strong>, and add a negative sign:
+    </p>
+    <p>Result: <strong>-(0001)<sub>2</sub></strong></p>
+
+    <h3>Example 2: Subtract (11001)<sub>2</sub> from (11101)<sub>2</sub> using 1's and 2's complement.</h3>
+    <p>
+        Given: <strong>(11101)<sub>2</sub> - (11001)<sub>2</sub></strong>
+    </p>
+    <h4>A) Using 1's Complement</h4>
+    <p>
+        1's complement of <strong>(11001)<sub>2</sub></strong> is <strong>(00110)<sub>2</sub></strong>.
+        Adding <strong>(00110)<sub>2</sub></strong> with <strong>(11101)<sub>2</sub></strong> gives:
+    </p>
+    <p>
+        <strong>(00110)<sub>2</sub> + (11101)<sub>2</sub> = (100011)<sub>2</sub></strong>
+    </p>
+    <p>
+        Since there is an extra bit, we remove it and add it:
+    </p>
+    <p>
+        <strong>(00011)<sub>2</sub> + (1)<sub>2</sub> = (00100)<sub>2</sub></strong>
+    </p>
+    <p>Result: <strong>(00100)<sub>2</sub></strong></p>
+
+    <h4>B) Using 2's Complement</h4>
+    <p>
+        2's complement of <strong>(11001)<sub>2</sub></strong> is <strong>(00110)<sub>2</sub></strong> + <strong>(1)<sub>2</sub></strong> = <strong>(00111)<sub>2</sub></strong>.
+        Adding <strong>(00111)<sub>2</sub></strong> with <strong>(11101)<sub>2</sub></strong> gives:
+    </p>
+    <p>
+        <strong>(00111)<sub>2</sub> + (11101)<sub>2</sub> = (100100)<sub>2</sub></strong>
+    </p>
+    <p>
+        Since there is an extra bit, we remove it:
+    </p>
+    <p>Result: <strong>(00100)<sub>2</sub></strong></p>
+
+    <h2>Introduction: Boolean Logic</h2>
+    <p>
+        Boolean Algebra is the algebra of logic that deals with binary variables and logical operations. As all data are represented in binary values, we need to manipulate these values using certain rules and expressions through Boolean algebra. It is a fundamental method for analyzing and designing logic circuits, introduced by the English mathematician George Boole.
+    </p>
+    <p>
+        In Boolean algebra, variables can have only one of two possible values: 0 or 1 (False or True). Every modern digital computer understands these two values.
+    </p>
+
+    <h3>Boolean Algebra</h3>
+    <p>
+        Boolean algebra is the algebra of logic that accepts either of the two values (0 and 1) and generates a result through logical relationships and operations.
+    </p>
+
+    <h3>Boolean Variables</h3>
+    <p>
+        Boolean variables are entities that can have either 0 or 1, representing specific operations. They are denoted by letters such as A, B, P, Q, X, Y, Z, etc.
+    </p>
+
+    <h3>Boolean Functions (Logic Functions)</h3>
+    <p>
+        A Boolean function is an expression formed by binary variables, binary operators (AND, OR, NOT), parentheses, and equal signs. For a given set of values, this Boolean function yields a result of either 0 or 1.
+    </p>
+    <p>
+        For example, <strong>F = XYZ' + XY</strong>, where F is a Boolean function, and X, Y, and Z are Boolean variables.
+    </p>
+
+    <h3>Truth Table</h3>
+    <p>
+        A truth table represents the input-output relationship for each logical gate. It shows the relationship between input and output in a tabular form, summarizing the results of logical operations on all possible combinations of logical values.
+    </p>
+
+    <h2>Boolean Operators and Operands</h2>
+    <p>
+        Operators are symbols that define specific operations. The three basic operators used in Boolean Algebra are AND, OR, and NOT. All other operations can be expressed in terms of these basic operations.
+    </p>
+
+    <h3>a. AND Operator</h3>
+    <p>
+        The AND operator is represented by “.”. The result of the AND operation is the same as simple arithmetic multiplication. The result will be high (1) only when both inputs are high. 
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y = A.B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h3>b. OR Operator</h3>
+    <p>
+        The OR operator is represented by “+”. The result of the OR operation is the same as simple arithmetic addition. The result will be low (0) only when both inputs are low.
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y = A + B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h3>c. NOT Operator</h3>
+    <p>
+        The NOT operator is represented by “-” or “’”. The NOT operation performs negation, giving high output (1) for low input (0) and vice-versa.
+    </p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>A'</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <h2>Logic Gates</h2>
+    <p>
+        A logic gate is an electronic circuit that operates on one or more inputs to produce an output. Logic gates are fundamental components of modern digital computers. Each gate has its specific function and graphical symbol. Below are the basic logic gates:
+    </p>
+
+    <h3>a. AND Gate</h3>
+    <p>
+        The AND gate produces a high output (1) only when both inputs are high. Graphically, it is represented as:
+    </p>
+    <p>Algebraically, output is expressed as: <strong>Y = A.B</strong></p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y = A.B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h3>b. OR Gate</h3>
+    <p>
+        The OR gate produces low output (0) only when all inputs are low (0) and produces high output (1) for every possible combination of 0 and 1. Graphically, it is represented as:
+    </p>
+    <p>Algebraically, output is represented as: <strong>Y = A + B</strong></p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y = A + B</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <h3>c. NOT Gate</h3>
+    <p>
+        The NOT gate produces the complement of its input. It has a single input and output. Graphically, it is represented as:
+    </p>
+    <p>Algebraically, output is represented as: <strong>Y = A'</strong></p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>A'</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <h3>d. NAND Gate</h3>
+    <p>
+        The NAND gate is a derived gate from the AND gate and produces low output (0) only when both inputs are high (1). Graphically, it is represented as:
+    </p>
+    <p>Algebraically, output is represented as: <strong>Y = (A.B)' </strong></p>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A.B</th>
+            <th>Y = (A.B)'</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td
