@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: Web Technology - I</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light background color */
+            color: #000; /* Black text */
+        }
+        h1, h2, h3 {
+            color: #333; /* Darker text for headings */
+            animation: fadeIn 1s ease-in;
+        }
+        p {
+            line-height: 1.6;
+            animation: slideIn 1s ease-in;
+        }
+        ul {
+            animation: slideIn 1s ease-in;
+            margin-left: 20px;
+        }
+        pre {
+            background-color: #e9ecef;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0; /* Light gray header */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 6: Web Technology - I</h1>
+
+    <h2>Introduction to the Internet</h2>
+    <p>
+        The Internet is the global network of networks. It is a huge collection of computers all over the world that are interconnected to one another in various ways to form a web-net.
+    </p>
+
+    <h3>Components Required for Internet Connections</h3>
+    <ul>
+        <li>A TCP/IP (Transmission Control Protocol/Internet Protocol) enabled computer with a web browser.</li>
+        <li>An account with an ISP (Internet Service Provider).</li>
+        <li>A telephone line.</li>
+        <li>A MODEM to connect to the telephone line and computer.</li>
+        <li>A set of computer with the following capacity:
+            <ul>
+                <li>Minimum 386 microprocessor chip with 16 MB RAM.</li>
+                <li>Color monitor with 256 color support and 640x480 resolution.</li>
+                <li>A hard disk of 200 MB free space.</li>
+                <li>Multimedia sound card and speaker.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Internet Services and Applications</h3>
+    <ul>
+        <li><strong>World Wide Web (WWW):</strong> A series of services interconnected through hypertext, allowing users to link web documents.</li>
+        <li><strong>Web Browser:</strong> A program that accesses web pages and displays them on the computer screen. Examples include Internet Explorer, Safari, Mozilla Firefox, and Chrome.</li>
+        <li><strong>FTP - File Transfer Protocol:</strong> An Internet tool that permits the transfer of files between computers.</li>
+        <li><strong>Electronic Mail (E-mail):</strong> Sending and receiving messages electronically through the Internet.</li>
+        <li><strong>Voicemail:</strong> A service that answers telephone calls and records audio messages.</li>
+        <li><strong>USENET – View and News:</strong> A bulletin board service (BBS) of the Internet with organized messages in newsgroups.</li>
+        <li><strong>Chat:</strong> A feature that allows real-time text communication between users.</li>
+        <li><strong>IRC (Internet Relay Chat):</strong> A multi-user live chat facility that allows users to communicate in channels.</li>
+        <li><strong>Video Conferencing:</strong> Enables direct face-to-face communication over networks using video and sound.</li>
+        <li><strong>Universal Resource Locator (URL):</strong> A unique address that identifies a location on the Internet.</li>
+        <li><strong>E-Fax (Electronic Fax):</strong> A facility to send and receive faxes directly on a computer.</li>
+    </ul>
+
+    <h3>Difference between E-mail and E-Fax</h3>
+    <table>
+        <tr>
+            <th>E-mail</th>
+            <th>E-Fax</th>
+        </tr>
+        <tr>
+            <td>It is very cheap.</td>
+            <td>It takes more cost than E-mail.</td>
+        </tr>
+        <tr>
+            <td>Message first goes to the local server.</td>
+            <td>Message first goes to the Internet server and then to its destination.</td>
+        </tr>
+        <tr>
+            <td>Message is stored in the hard disk of the destination computer (server).</td>
+            <td>Message directly goes to print in the printer of the destination computer.</td>
+        </tr>
+    </table>
+
+    <h3>TELNET – Remote Login</h3>
+    <p>
+        Telnet allows users to log in to a host computer from a remote computer using a telnet program. It enables a user to be on one computer system and work on another, regardless of distance.
+    </p>
+
+    <h3>Internet Terminologies</h3>
+    <ul>
+        <li><strong>ISP:</strong> Internet Service Provider, an institution that provides access to the Internet.</li>
+        <li><strong>Link:</strong> A quick route to jump to other web pages from your current page.</li>
+        <li><strong>Search Engine:</strong> Software that searches the web for you (e.g., Yahoo, Google).</li>
+        <li><strong>Domain Name and IP Address:</strong> A unique name that identifies an Internet site, with an IP address being its corresponding number.</li>
+        <li><strong>DNS Server:</strong> Domain Name Services Server that provides unique alphanumeric names for computer hosts.</li>
+        <li><strong>Web Server:</strong> A site where web pages are stored.</li>
+        <li><strong>Usernet Newsgroups:</strong> Special headlines for searching related topics easily.</li>
+        <li><strong>Mailing Lists:</strong> Special type of e-mail list delivered to individual mailboxes.</li>
+        <li><strong>POP Server:</strong> Where incoming mails are stored for retrieval.</li>
+        <li><strong>SMTP Server:</strong> Used to transfer electronic mail between computers.</li>
+        <li><strong>FTP (File Transfer Protocol):</strong> A set of rules for transferring data between computers.</li>
+        <li><strong>Anonymous FTP:</strong> A facility to retrieve archived sites without making public.</li>
+        <li><strong>HTTP (Hypertext Transfer Protocol):</strong> Protocol used by web browsers and servers to communicate.</li>
+        <li><strong>Proxy Server:</strong> Improves access speed and updates information on your site.</li>
+        <li><strong>Internet Roaming:</strong> Allows the use of an Internet account from anywhere in the world.</li>
+    </ul>
+
+    <h2>Introduction to HTML</h2>
+    <div style="text-align: center;">
+        <img src="img14.jpeg" alt="Description of image 1" style="display: inline-block; width: 30%; margin-right: 10px;">
+        <img src="img15.png" alt="Description of image 2" style="display: inline-block; width: 30%; margin-right: 10px;">
+        <img src="img16.png" alt="Description of image 3" style="display: inline-block; width: 30%;">
+    </div>
+    <p>
+        HTML stands for Hyper Text Markup Language, used to create web pages for exchanging data and information over the Internet. An HTML file is a text file containing several tags and attributes. It was developed by Tim Berners-Lee, based on SGML (Standard Generalized Markup Language). HTML tags are executed by web browsers, which generate the content of the page. Different versions of HTML include HTML, HTML+, HTML 1.0, HTML 2.0, HTML 3.2, HTML 4.01, and HTML 5.0.
+    </p>
+
+    <h3>Use of HTML</h3>
+    <ul>
+        <li>Create basic layout or design of web pages.</li>
+        <li>Without HTML, the World Wide Web wouldn't exist.</li>
+        <li>Embed images, videos, audio, etc.</li>
+        <li>Customize text formatting such as bold, italic, underline, etc.</li>
+        <li>Create links and lists.</li>
+    </ul>
+
+    <h3>Advantages of HTML</h3>
+    <ul>
+        <li>Easy to use, flexible, and user-friendly.</li>
+        <li>Supported by all web browsers and operating systems.</li>
+        <li>Easy to obtain and modify content.</li>
+        <li>Compatible with all search engines.</li>
+        <li>HTML files load quickly.</li>
+        <li>Many tutorials are available for learning HTML.</li>
+    </ul>
+
+    <h3>Disadvantages of HTML</h3>
+    <ul>
+        <li>Creating attractive and interactive web pages is difficult with only HTML.</li>
+        <li>Cannot create dynamic web pages solely using HTML.</li>
+        <li>It is a scripting language, not a programming language.</li>
+        <li>Many incompatibilities exist in HTML.</li>
+        <li>No complete acceptable standard for HTML.</li>
+    </ul>
+
+    <h3>HTML Tags</h3>
+    <p>
+        HTML tags are instructions or commands given to the web browser to organize text, images, and other components of web pages. Tags are written inside angular brackets <code>&lt;&gt;</code>. There are two types of HTML tags:
+    </p>
+    <ul>
+        <li><strong>Pair Tag:</strong> Tags that have both opening and closing tags (e.g., <code>&lt;tag&gt;...&lt;/tag&gt;</code>).</li>
+        <li><strong>Singular Tag:</strong> Tags that have only an opening tag (e.g., <code>&lt;tag&gt;</code>).</li>
+    </ul>
+
+    <h3>Attributes</h3>
+    <p>
+        Attributes are descriptive properties of HTML tags written within the respective tag. They allow designers to customize and modify various components of web pages according to requirements.
+    </p>
+
+    <h3>Steps to Write and Execute an HTML Document</h3>
+    <ul>
+        <li>Write all HTML tags, attributes, and related information in a text editor.</li>
+        <li>Save your document using a desired name followed by a .html extension (e.g., <code>sample.html</code>).</li>
+        <li>Execute the HTML file using any web browser.</li>
+    </ul>
+
+    <h3>Some Common Terminologies of Web Designing</h3>
+    <ul>
+        <li><strong>Webpage:</strong> An HTML document that executes information in the form of text, images, or other components through the Internet.</li>
+        <li><strong>Website:</strong> A collection of interrelated webpages.</li>
+        <li><strong>Home Page:</strong> The introductory page of a website.</li>
+        <li><strong>Web Browser:</strong> An application that helps access any content of webpages using HTTP.</li>
+        <li><strong>URL:</strong> Uniform Resource Locator, a standard way to reference a protocol, host, and directory.</li>
+    </ul>
+
+    <h2>DBMS (Database Management System)</h2>
+    <h3>Data and Information</h3>
+    <p>
+        Data are raw facts and figures that do not provide meaning until processed. Information is the meaningful result obtained after processing data. A database is a systematic and scientific arrangement of data, allowing for easy retrieval and meaningful results. Database Management Systems (DBMS) are software applications that help maintain databases and process data to obtain desired information.
+    </p>
+
+    <h3>Advantages of DBMS</h3>
+    <ul>
+        <li>Allows users to search quickly and easily.</li>
+        <li>Reduces data redundancy.</li>
+        <li>Facilitates data sharing over a network.</li>
+        <li>Enhances data security and privacy.</li>
+        <li>Improves data consistency.</li>
+        <li>Provides organized data storage.</li>
+    </ul>
+
+    <h3>Disadvantages of DBMS</h3>
+    <ul>
+        <li>Higher installation and operating costs.</li>
+        <li>Requires more disk space.</li>
+        <li>Potential security and privacy issues.</li>
+        <li>Requires technical manpower (DBA) for maintenance.</li>
+    </ul>
+</body>
+</html>
