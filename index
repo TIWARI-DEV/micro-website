@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Study Website</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            color: #00ff00;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: #000; /* Solid black background */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #00ff00;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #00ff00;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+            gap: 20px;
+            padding: 20px;
+            overflow-y: auto; /* Enable scrolling if content overflows */
+            flex: 1; /* Allow grid to take available space */
+        }
+
+        .grid-item {
+            color: #00ff00;
+            text-align: center;
+            border-radius: 8px;
+            padding: 40px 20px;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+            border: 1px solid #00ff00;
+            text-decoration: none;
+            height: 150px; /* Set a fixed height for uniformity */
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+
+        .content {
+            padding: 20px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.9);
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #ffffff;
+            overflow-y: auto; /* Enable scrolling if content overflows */
+            max-height: 300px; /* Limit height for better visibility */
+        }
+
+        .quote-container {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.5em;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        /* Library Button Styles */
+        .library-button {
+            padding: 10px 20px;
+            background-color: rgba(0, 255, 0, 0.8);
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .library-button:hover {
+            background-color: rgba(0, 255, 0, 1);
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 200px;
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: rgba(0, 255, 0, 0.5);
+        }
+
+        /* Add Files Button */
+        .add-files-button {
+            padding: 10px 20px;
+            background-color: rgba(0, 255, 0, 0.8);
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .add-files-button:hover {
+            background-color: rgba(0, 255, 0, 1);
+        }
+
+        /* PDF Viewer Styles */
+        .pdf-viewer {
+            margin-top: 20px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            display: none; /* Hidden by default */
+            height: 600px; /* Set a specific height */
+            width: 100%; /* Full width */
+            overflow: auto; /* Enable scrolling */
+        }
+
+        .pdf-viewer iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h1>Study Course: Computer Fundamentals</h1>
+        <div style="position: relative;">
+            <button id="libraryButton" class="library-button">LIBRARY</button>
+            <div id="dropdownMenu" class="dropdown">
+                <a href="https://www.khanacademy.org/computing/computer-science" target="_blank">Chapter 1: Computer System</a>
+                <a href="https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86b2b5d1d63e1a6a0a5c1" target="_blank">Chapter 2: Number System</a>
+                <a href="https://www.edx.org/course/introduction-to-computer-science" target="_blank">Chapter 3: Software & OS</a>
+                <a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Chapter 4: Application Package</a>
+                <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/" target="_blank">Chapter 5: Programming Concepts</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">Chapter 6: Web Technology</a>
+                <a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Chapter 7: Multimedia</a>
+                <a href="https://www.coursera.org/learn/information-security" target="_blank">Chapter 8: Info Security</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="grid-container">
+            <a href="chapter1.html" class="grid-item item1">Chapter 1<br><span>Computer System</span></a>
+            <a href="chapter2.html" class="grid-item item2">Chapter 2<br><span>Number System</span></a>
+            <a href="chapter3.html" class="grid-item item3">Chapter 3<br><span>Software & OS</span></a>
+            <a href="chapter4.html" class="grid-item item4">Chapter 4<br><span>Application Package</span></a>
+            <a href="chapter5.html" class="grid-item item5">Chapter 5<br><span>Programming Concepts</span></a>
+            <a href="chapter6.html" class="grid-item item6">Chapter 6<br><span>Web Technology</span></a>
+            <a href="chapter7.html" class="grid-item item7">Chapter 7<br><span>Multimedia</span></a>
+            <a href="chapter8.html" class="grid-item item8">Chapter 8<br><span>Info Security</span></a>
+            <a href="qna.html" class="grid-item item9">EXTRA-materials<br><span>question&answers</span></a>
+        </div>
+
+        <div class="quote-container" id="quote"></div>
+        <div id="content" class="content"></div>
+        
+        <button class="add-files-button" id="addFilesButton">ADD FILES</button>
+        <input type="file" id="fileInput" style="display:none;" accept=".pdf" multiple>
+        <div id="pdfViewer" class="pdf-viewer"></div>
+    </main>
+
+    <script>
+        const quotes = [
+            "The only way to do great work is to love what you do. – Steve Jobs",
+            "Success is not the key to happiness. Happiness is the key to success. – Albert Schweitzer",
+            "Education is the most powerful weapon which you can use to change the world. – Nelson Mandela",
+            "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+            "It always seems impossible until it's done. – Nelson Mandela",
+            "The best way to predict the future is to create it. – Peter Drucker",
+            "You are never too old to set another goal or to dream a new dream. – C.S. Lewis",
+            "Believe you can and you're halfway there. – Theodore Roosevelt"
+        ];
+
+        let currentQuoteIndex = 0;
+
+        function showQuote() {
+            const quoteDiv = document.getElementById('quote');
+            quoteDiv.textContent = '';
+            const currentQuote = quotes[currentQuoteIndex];
+            let i = 0;
+
+            const typingEffect = setInterval(() => {
+                if (i < currentQuote.length) {
+                    quoteDiv.textContent += currentQuote.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typingEffect);
+                    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+                    setTimeout(showQuote, 2000); // Wait before showing the next quote
+                }
+            }, 100); // Typing speed
+        }
+
+        // Library button click event
+        document.getElementById('libraryButton').addEventListener('click', () => {
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Add Files button click event
+        document.getElementById('addFilesButton').addEventListener('click', () => {
+            document.getElementById('fileInput').click();
+        });
+
+        // File input change event to display PDF
+        document.getElementById('fileInput').addEventListener('change', (event) => {
+            const files = event.target.files;
+            const pdfViewer = document.getElementById('pdfViewer');
+            pdfViewer.innerHTML = ''; // Clear previous PDFs
+
+            Array.from(files).forEach(file => {
+                const fileURL = URL.createObjectURL(file);
+                const iframe = document.createElement('iframe');
+                iframe.src = fileURL;
+                iframe.onload = () => URL.revokeObjectURL(fileURL); // Cleanup the object URL
+                pdfViewer.appendChild(iframe);
+            });
+
+            pdfViewer.style.display = files.length > 0 ? 'block' : 'none'; // Show viewer if files are added
+        });
+
+        // Show the first quote immediately
+        showQuote(); 
+    </script>
+</body>
+
+</html>
